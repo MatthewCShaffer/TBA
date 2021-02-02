@@ -1,0 +1,11 @@
+﻿  DataBase.cpp
+  GameData.cpp
+  GameObject.cpp
+  Main.cpp
+  TextParser.cpp
+  Generating Code...
+  shell.c
+  sqlite3.c
+  Generating Code...
+LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
+  TBA.vcxproj -> C:\Users\Matthew\Documents\TBA\TBA\Debug\TBA.exe
