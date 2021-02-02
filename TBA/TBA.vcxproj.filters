@@ -49,9 +49,11 @@
     </Filter>
     <Filter Include="Header">
       <UniqueIdentifier>{5505a571-7423-4e90-84be-0b5e9b512b50}</UniqueIdentifier>
+      <Extensions>h</Extensions>
     </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{adda108e-91cb-4c85-a1d8-729302591ad6}</UniqueIdentifier>
+      <Extensions>cpp;c</Extensions>
     </Filter>
   </ItemGroup>
 </Project>
