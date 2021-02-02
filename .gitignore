@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+#MS Debug FIles
+.vs\
+x64\
+TBA\Debug\
+TBA\x64\

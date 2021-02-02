@@ -8,4 +8,4 @@
   sqlite3.c
   Generating Code...
 LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
-  TBA.vcxproj -> C:\Users\Matthew\Documents\TBA\TBA\Debug\TBA.exe
+  TBA.vcxproj -> C:\Users\Matthew\Documents\GitHub\TBA\Debug\TBA.exe
