@@ -32,10 +32,9 @@
 *.app
 
 #MS Debug FIles
-.vs\
-x64\
-TBA\Debug\
-TBA\x64\
+.vs/
+x64/
+TBA/Debug/
+TBA/x64/
 *.vcxproj.filters
 *.vcxproj.user
-*.vcxproj
