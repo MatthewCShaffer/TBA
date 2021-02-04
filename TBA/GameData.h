@@ -1,6 +1,6 @@
 #pragma once
-#include <memory>
 #include <vector>
+#include <memory>
 #include "TextParser.h"
 #include "DataBase.h"
 #include "Scene.h"
