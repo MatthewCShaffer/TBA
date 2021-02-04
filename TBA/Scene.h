@@ -3,12 +3,10 @@
 #include <memory>
 #include "GameObject.h"
 
-using namespace std;
-
 class Scene {
 	public:
 		Scene();
-		vector<unique_ptr<GameObject>> * GetObjects();
+		std::vector<std::unique_ptr<GameObject>> * GetObjects();
 	private:
-		vector<unique_ptr<GameObject>> SceneObjects;
+		std::vector<std::unique_ptr<GameObject>> SceneObjects;
 };

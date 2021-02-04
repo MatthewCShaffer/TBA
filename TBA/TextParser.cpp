@@ -1,4 +1,7 @@
 #include "Textparser.h"
+#include <iostream>
+
+using namespace std;
 
 TextParser::TextParser(GameData* game) : parentGame{ game }
 {

@@ -1,5 +1,7 @@
 #include "Scene.h"
 
+using namespace std;
+
 Scene::Scene() {
 	SceneObjects.push_back(make_unique<GameObject>());
 }

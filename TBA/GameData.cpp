@@ -1,4 +1,8 @@
 #include "GameData.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
 
 GameData::GameData() : parser{ TextParser(this) }, reader{ DataBaseReader() } {
     Scenes.push_back(make_unique<Scene>());

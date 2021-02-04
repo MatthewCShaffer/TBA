@@ -1,14 +1,10 @@
 #pragma once
-#include <iostream>
-#include <string>
+#include <memory>
 #include <vector>
 #include "TextParser.h"
 #include "DataBase.h"
 #include "Scene.h"
 
-using namespace std;
-class TextParser;
-class DataBaseReader;
 class GameData {
 	public:
 		GameData();
@@ -18,5 +14,5 @@ class GameData {
 		TextParser parser;
 		DataBaseReader reader;
 		Scene * CurrentScene;
-		vector<unique_ptr<Scene>> Scenes;
+		std::vector<std::unique_ptr<Scene>> Scenes;
 };
