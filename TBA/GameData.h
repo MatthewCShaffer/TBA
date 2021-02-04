@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 #include "TextParser.h"
 #include "DataBase.h"
+#include "Scene.h"
 
 using namespace std;
 class TextParser;
@@ -15,4 +17,6 @@ class GameData {
 	private:
 		TextParser parser;
 		DataBaseReader reader;
+		Scene * CurrentScene;
+		vector<unique_ptr<Scene>> Scenes;
 };

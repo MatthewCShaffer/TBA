@@ -1,10 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string>
-#include <iostream>
-
-#include "sqlite/sqlite3.h"
-
 #include "DataBase.h"
 
 using namespace std;

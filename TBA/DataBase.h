@@ -1,6 +1,8 @@
 #pragma once
-#include "sqlite/sqlite3.h"
 #include <string>
+#include <iostream>
+
+#include "sqlite/sqlite3.h"
 
 using namespace std;
 
