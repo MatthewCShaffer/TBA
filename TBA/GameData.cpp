@@ -13,11 +13,29 @@ GameData::~GameData() {
 }
 
 void GameData::Start() {
-    cout << "The game has started" << endl;
+    cout << "The game has started. Hello!" << endl;
+    cout << reader.GetStringByKey("TestKey") << endl;
     string input;
-    cout << CurrentScene->GetObjects()->at(0)->view() << endl;
+
+    //Testing Moving Objects around
+    auto objects = CurrentScene->GetObjects();
+    auto &target = objects->at(0);
+    CurrentScene->ListSceneObjects();
+    PlayerInventory.ListInventroy();
+
+    PlayerInventory.AddInventory(target);
+
+    CurrentScene->ListSceneObjects();
+    PlayerInventory.ListInventroy();
+
+    PlayerInventory.RemoveInventory(PlayerInventory.GetInventory()->at(0));
+
+    CurrentScene->ListSceneObjects();
+    PlayerInventory.ListInventroy();
+
+    //Test game loop
     while (input != "exit") {
         input = parser.GetNextCommand();
     }
-    cout << reader.GetStringByKey("TestKey") << endl;
+    cout << "The game has ended. Goodbye!" << endl;
 }

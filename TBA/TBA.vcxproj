@@ -142,9 +142,9 @@
     <ClCompile Include="DataBase.cpp" />
     <ClCompile Include="GameData.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Sqlite\shell.c" />
     <ClCompile Include="Sqlite\sqlite3.c" />
     <ClCompile Include="TextParser.cpp" />
   </ItemGroup>
@@ -152,9 +152,9 @@
     <ClInclude Include="DataBase.h" />
     <ClInclude Include="GameData.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Sqlite\sqlite3.h" />
-    <ClInclude Include="Sqlite\sqlite3ext.h" />
     <ClInclude Include="TextParser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

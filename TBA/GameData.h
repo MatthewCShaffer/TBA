@@ -4,6 +4,7 @@
 #include "TextParser.h"
 #include "DataBase.h"
 #include "Scene.h"
+#include "Inventory.h"
 
 class GameData {
 	public:
@@ -15,4 +16,6 @@ class GameData {
 		DataBaseReader reader;
 		Scene * CurrentScene;
 		std::vector<std::unique_ptr<Scene>> Scenes;
+		Inventory PlayerInventory;
+		
 };

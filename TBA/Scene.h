@@ -7,6 +7,7 @@ class Scene {
 	public:
 		Scene();
 		std::vector<std::unique_ptr<GameObject>> * GetObjects();
+		void ListSceneObjects();
 	private:
 		std::vector<std::unique_ptr<GameObject>> SceneObjects;
 };
