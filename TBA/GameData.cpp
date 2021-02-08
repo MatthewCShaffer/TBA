@@ -5,7 +5,7 @@
 using namespace std;
 
 GameData::GameData() : parser{ TextParser(this) }, reader{ DataBaseReader() } {
-    Scenes.push_back(make_unique<Scene>());
+    Scenes.push_back(make_unique<Scene>("Default Scene"));
     CurrentScene = Scenes.at(0).get();
 }
 
@@ -20,17 +20,18 @@ void GameData::Start() {
     //Testing Moving Objects around
     auto objects = CurrentScene->GetObjects();
     auto &target = objects->at(0);
-    CurrentScene->ListSceneObjects();
+    CurrentScene->View();
     PlayerInventory.ListInventroy();
 
-    PlayerInventory.AddInventory(target);
+    Take(target);
 
-    CurrentScene->ListSceneObjects();
+    CurrentScene->View();
     PlayerInventory.ListInventroy();
 
-    PlayerInventory.RemoveInventory(PlayerInventory.GetInventory()->at(0));
+    if(!PlayerInventory.GetInventory()->empty())
+        PlayerInventory.RemoveInventory(PlayerInventory.GetInventory()->at(0));
 
-    CurrentScene->ListSceneObjects();
+    CurrentScene->View();
     PlayerInventory.ListInventroy();
 
     //Test game loop
@@ -38,4 +39,21 @@ void GameData::Start() {
         input = parser.GetNextCommand();
     }
     cout << "The game has ended. Goodbye!" << endl;
+}
+
+void GameData::Take(unique_ptr<GameObject>& Object)
+{
+    if (!Object->canTake())
+    {
+        cout << "You cannot take that" << endl;
+        return;
+    }
+    PlayerInventory.AddInventory(Object);
+    CurrentScene->RemoveObject(Object);
+}
+
+void GameData::Drop(unique_ptr<GameObject>& Object)
+{
+    CurrentScene->AddObject(Object);
+    PlayerInventory.RemoveInventory(Object);
 }

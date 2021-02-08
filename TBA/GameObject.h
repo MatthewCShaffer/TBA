@@ -3,9 +3,13 @@
 
 class GameObject {
 	public:
-		GameObject(std::string Name);
+		GameObject(std::string Name, std::string Description, bool canBeTaken = false);
 		~GameObject();
-		std::string view();
+		void View();
+		std::string GetIdentifier();
+		bool canTake();
 	private:
 		std::string Identifier;
+		std::string Discription;
+		bool canBeTaken;
 };

@@ -6,11 +6,14 @@
 #include "Scene.h"
 #include "Inventory.h"
 
+class GameObject;
 class GameData {
 	public:
 		GameData();
 		~GameData();
 		void Start();
+		void Take(std::unique_ptr<GameObject>& Object);
+		void Drop(std::unique_ptr<GameObject>& Object);
 	private:
 		TextParser parser;
 		DataBaseReader reader;

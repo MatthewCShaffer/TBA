@@ -3,7 +3,7 @@
 
 using namespace std;
 
-GameObject::GameObject(string name) : Identifier(name) {
+GameObject::GameObject(string name, string Description, bool canBeTaken) : Identifier(name), Discription(Description), canBeTaken(canBeTaken) {
 	cout << "Made an object with the name: " << name << endl;
 }
 
@@ -11,6 +11,15 @@ GameObject::~GameObject() {
 	cout << "Destroying an object with the name: " << Identifier << endl;
 }
 
-string GameObject::view() {
-	return "I am " + Identifier;
+string GameObject::GetIdentifier() {
+	return Identifier;
+}
+void GameObject::View()
+{
+	cout << Discription << endl;
+}
+
+bool GameObject::canTake()
+{
+	return canBeTaken;
 }

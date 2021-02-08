@@ -17,23 +17,21 @@ void Inventory::ListInventroy()
     cout << "Your Inventory contains: " << endl;
     for (auto& it : InventoryObjects) {
         if (it != nullptr)
-            cout << it->view() << "\n";
+            it->View();
     }
     cout << endl;
 }
 
 void Inventory::AddInventory(unique_ptr<GameObject>& Object)
 {
-    cout << "Adding Item to Inventory: " << Object->view() << endl;
     InventoryObjects.push_back(move(Object));
 }
 
-bool Inventory::RemoveInventory(unique_ptr<GameObject>& Object)
+bool Inventory::RemoveInventory(const unique_ptr<GameObject>& Object)
 {
     auto location = std::remove(InventoryObjects.begin(), InventoryObjects.end(), Object);
     if (location != InventoryObjects.end())
     {
-        cout << "Removinging Item from Inventory: " << Object->view() << endl;
         InventoryObjects.erase(location);
         return true;
     }
